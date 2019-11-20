@@ -1,0 +1,28 @@
+.searchBar{
+    height: 96px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dfe2e8;
+    padding: 26px 40px;
+}
+
+.prdCompBtn{
+    width: 120px;
+    height: 44px;
+    border-radius: 5px;
+    border: solid 1px #c8cacf;
+    background-color: #ffffff;
+    font-family: 'AppleSDGothicNeo';
+    font-size: 15px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4a4e57;
+    margin-right: 8px;
+}
+
+.prdSeletedCompBtn{
+
+}
