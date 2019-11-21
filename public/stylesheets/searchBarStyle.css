@@ -1,8 +1,9 @@
 .searchBar{
-    height: 96px;
+    min-height: 96px;
     background-color: #ffffff;
     border-bottom: 1px solid #dfe2e8;
     padding: 26px 40px;
+    
 }
 
 .prdCompBtn{
@@ -24,5 +25,21 @@
 }
 
 .prdSeletedCompBtn{
+}
+
+.prdDropdownBtn{
+    width: 120px;
+    height: 44px;
+    border-radius: 5px;
+    border: solid 1px #c8cacf;
+    background-color: #ffffff;
+}
+
+.dropdownCommon{
+    width: 110px;
+    height: 44px;
+    border-radius: 5px;
+    border: solid 1px #c8cacf;
+    background-color: #ffffff;
 
 }
