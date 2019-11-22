@@ -3,7 +3,6 @@
     background-color: #ffffff;
     border-bottom: 1px solid #dfe2e8;
     padding: 26px 40px;
-    
 }
 
 .prdCompBtn{
@@ -25,21 +24,67 @@
 }
 
 .prdSeletedCompBtn{
+
 }
 
 .prdDropdownBtn{
-    width: 120px;
     height: 44px;
     border-radius: 5px;
     border: solid 1px #c8cacf;
     background-color: #ffffff;
+    font-family: 'AppleSDGothicNeo';
+    font-size: 15px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #17191d;
 }
 
-.dropdownCommon{
-    width: 110px;
+.prdDateRangepicker{
+    min-width:230px;
+    height: 44px;
+    font-family: 'AppleSDGothicNeo';
+    font-size: 15px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4a4e57;
+    margin-left: 8px;
+}
+
+.prdInput{
+    width: 230px;
     height: 44px;
     border-radius: 5px;
     border: solid 1px #c8cacf;
     background-color: #ffffff;
+    font-size: 15px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    padding-left:16px;
+    margin-left: 8px;
+}
 
+.searchBtn{
+    width: 100px;
+    height: 44px;
+    border-radius: 5px;
+    border: solid 1px #f23e6b;
+    background-color: #ffffff;
+    font-family: 'AppleSDGothicNeo';
+    font-size: 15px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #f23e6b;
 }

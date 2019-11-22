@@ -5,13 +5,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
        
-        <title> voc board </title>
+        <title> Voc Board </title>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="/stylesheets/style.css">
         <link rel="stylesheet" href="/stylesheets/headerStyle.css">
         <link rel="stylesheet" href="/stylesheets/searchBarStyle.css">
         <link rel="stylesheet" href="/stylesheets/topicBarStyle.css">
+
+        <link rel="stylesheet" href="/stylesheets/datepicker.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+ 
         
     </head>
     <body>
@@ -30,6 +34,7 @@
                 </div>             
             </div>
         </div>
+
         <div class="container-fluid searchBar">
             <div class="row">
                 <div class="col-sm-3">
@@ -40,25 +45,66 @@
 
                 <div class="col-sm-9 justify-content-end" style="display:inherit">
                     <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle prdDropdownBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown button
+                        <button class="btn dropdown-toggle prdDropdownBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            접수일
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                        </div>
+                    </div>
+                    <div id="dateArea" style="margin-right:20px">
+                        <input class="form-control prdDateRangepicker" id="dates" type="text" name="dates" autocomplete="on">
+                        </input>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle prdDropdownBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            SR대분류
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                        </div>
+                    </div>
+                    <div id="dateArea" style="margin-right:20px">
+                        <input class="prdInput" type="text"  placeholder="조건을 검색해주세요">
+                        </input>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle prdDropdownBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            상품코드
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="#">Action</a>
                             <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </div>
-                </div>
+                    <div id="dateArea" style="margin-right:20px">
+                        <input class="prdInput" type="text">
+                        </input>
+                    </div>
                     
+                    <button class="searchBtn">조회</button>
+                </div>
             </div>
-
         </div>
+        <div class="container-fluid topicBar">
+            <div>
+                
+            </div>
+        </div>
+
 
         <script src="/js/jquery.min.js"></script>
         <script src="/js/bootstrap.bundle.min.js"></script>
         <script src="/js/bootstrap.bundle.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+
+        <script src="/javascripts/dateRangePicker.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+      
     </body>
 
 </html>
