@@ -1,0 +1,24 @@
+.topicBar{
+    min-height: 64px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dfe2e8;
+    padding: 0px 40px;
+}
+
+.topicFont{
+    font-family: 'AppleSDGothicNeo';
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    color: #4a4e57;
+}
+
+.topicBarCommonBtn{
+    height: 34px;
+    border-radius: 5px;
+    border: solid 1px #c8cacf;
+    background-color: #ffffff;
+}
