@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-       
+
         <title> Voc Board </title>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -12,11 +12,8 @@
         <link rel="stylesheet" href="/stylesheets/headerStyle.css">
         <link rel="stylesheet" href="/stylesheets/searchBarStyle.css">
         <link rel="stylesheet" href="/stylesheets/topicBarStyle.css">
-
         <link rel="stylesheet" href="/stylesheets/datepicker.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
- 
-        
     </head>
     <body>
         <div class="container-fluid header">
@@ -37,6 +34,7 @@
 
         <div class="container-fluid searchBar">
             <div class="row">
+
                 <div class="col-sm-3">
                     <button class="prdCompBtn">SR</button>
                     <button class="prdCompBtn">상품평</button>
@@ -56,7 +54,6 @@
                         <input class="form-control prdDateRangepicker" id="dates" type="text" name="dates" autocomplete="on">
                         </input>
                     </div>
-
                     <div class="dropdown">
                         <button class="btn dropdown-toggle prdDropdownBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             SR대분류
@@ -88,26 +85,41 @@
                 </div>
             </div>
         </div>
-
-
-        <div class="container-fluid topicBar">
-            <div class = "row">
-                <div class="col-sm-6">
-                    <div class="topicFont">
-                        주요 토픽
-                    </div>
-                    <button class="topicFont topicBarCommonBtn">SR</button>
-                    <button class="topicFont topicBarCommonBtn">상품평</button>
-                    <button class="topicFont topicBarCommonBtn">상품문의</button>
-
+        <div class="container-fluid">
+            <div class="row topicBar">                     <!--      이부분 반드시 유념할것 -->
+                <div class="col-md-6 topicBarCol  d-flex align-items-center">
+                    <div class="topicFont" style="margin-right:10px"> 주요 토픽 </div>
+                    <button class="topicFont topicBarCommonBtn">배송관련(0)</button>
+                    <button class="topicFont topicBarCommonBtn">상품관련(0)</button>
+                    <button class="topicFont topicBarCommonBtn">교환/반품/AS관련(0)</button>
+                    <button class="topicFont topicBarCommonBtn">방송이용관련(0)</button>
+                    <button class="topicFont topicBarCommonBtn">상품품질관련(0)</button>
+                    <button class="topicFont topicBarCommonBtn">고객제안(0)</button>
+                    <button class="topicFont topicBarCommonBtn">미등록(0)</button>
+            
                 </div>
-                <div class="col-sm-6">
-                    <button class="topicFont topicBarCommonBtn">SR</button>
-                    <button class="topicFont topicBarCommonBtn">상품평</button>
-                    <button class="topicFont topicBarCommonBtn">상품문의</button>
-    
+                <div class="col-md-6 topicBarCol d-flex align-items-center justify-content-end" style="display:inherit">
+                    
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+                        <label class="custom-control-label" for="customControlValidation1">Check this custom checkbox</label>
+                        <div class="invalid-feedback">Example invalid feedback text</div>
+                    </div>
+                    <div class="custom-control custom-checkbox topicCheckBox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label topicCheckBoxFont" for="customCheck1"> 상품문의/품질 SR </label>
+                    </div>
+                    <div class="custom-control custom-checkbox topicCheckBox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label topicCheckBoxFont" for="customCheck2"> 배송 SR </label>
+                    </div>
+                    <div class="custom-control custom-checkbox topicCheckBox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                        <label class="custom-control-label topicCheckBoxFont" for="customCheck3"> 그 외 SR </label>
+                    </div>
                 </div>
             </div>
+            
         </div>
 
 
