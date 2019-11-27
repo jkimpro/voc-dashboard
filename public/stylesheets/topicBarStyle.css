@@ -32,7 +32,6 @@
 }
 
 .custom-control-input:checked~.custom-control-label::before {
-    border-radius: 2px;
     border: solid 1px #c8cacf;
     color: white;
     background-color: white;

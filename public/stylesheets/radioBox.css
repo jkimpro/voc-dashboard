@@ -14,23 +14,18 @@
     }
   } 
 
-  form li {
-    margin: 0.3rem 0;
-  }
-  form div {
-    margin: 1.5rem 0;
-  }
   
   input[type="checkbox"],
   input[type="radio"] {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
-    margin: -1px;
+    /* margin: -1px; */
     overflow: hidden;
     padding: 0;
     position: absolute;
-    width: 1px;
+    /* width: 1px; */
+    
   }
   input[type="checkbox"]:hover + label:before,
   input[type="radio"]:hover + label:before {
@@ -45,9 +40,9 @@
   input[type="radio"] + label {
     position: relative;
     padding-left: 26px;
-    font-weight: normal;
   }
-  input[type="checkbox"] + label:before, input[type="checkbox"] + label:after,
+  input[type="checkbox"] + label:before,
+  input[type="checkbox"] + label:after,
   input[type="radio"] + label:before,
   input[type="radio"] + label:after {
     box-sizing: content-box;
@@ -60,10 +55,12 @@
   input[type="checkbox"] + label:before,
   input[type="radio"] + label:before {
     top: 50%;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
+    
     margin-top: -10px;
-    border: 2px solid #d9d9d9;
+    border: solid 1px #c8cacf;
+    border-radius: 2px;
     text-align: center;
   }
   input[type="checkbox"] + label:after,
@@ -83,15 +80,19 @@
     -moz-animation: borderscale 300ms ease-in;
     -webkit-animation: borderscale 300ms ease-in;
     animation: borderscale 300ms ease-in;
-    background-color: #fff;
+    background-color: #ffffff;
   }
+
   input[type="radio"]:checked + label:after {
-    transform: scale(1);
+    transform: scale(1.4);
   }
-  input[type="radio"] + label:before, input[type="radio"] + label:after {
+  input[type="radio"] + label:before, 
+  input[type="radio"] + label:after {
     border-radius: 50%;
   }
   
+
+
   input[type="checkbox"] + label:after {
     background-color: transparent;
     top: 50%;
@@ -111,11 +112,13 @@
     -webkit-transition: none;
     transition: none;
   }
+
   input[type="checkbox"]:checked + label:before {
     -moz-animation: borderscale 200ms ease-in;
     -webkit-animation: borderscale 200ms ease-in;
     animation: borderscale 200ms ease-in;
   }
+  
   input[type="checkbox"]:checked + label:after {
     content: '';
     -moz-transform: rotate(-45deg) scale(1);

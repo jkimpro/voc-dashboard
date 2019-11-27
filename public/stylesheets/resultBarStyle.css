@@ -1,10 +1,11 @@
 .resultBar{
-    padding: 41px 41px 0px 41px;
-    min-height: 80px;
+    margin-top: 20px;
+    padding: 0px 41px;
+    min-height: 59px;
 }
 
 .resultFont{
-    font-family: 'AppleSDGothicNeo';
+  font-family: 'AppleSDGothicNeo';
   font-size: 14px;
   font-weight: bold;
   font-stretch: normal;
@@ -13,6 +14,18 @@
   letter-spacing: normal;
   color: #4a4e57;
 }
+
+.resultOptionFont{
+  font-family: 'AppleSDGothicNeo';
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.15;
+  letter-spacing: normal;
+  color: #4a4e57;
+}
+
 .resultMarkFont{
   color: #f23e6b;
 }
