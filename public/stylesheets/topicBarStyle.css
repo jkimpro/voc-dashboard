@@ -31,26 +31,11 @@
     margin-left:30px;
 }
 
-/* .custom-control-input.is-valid:checked~.custom-control-label::before,
- .was-validated .custom-control-input:valid:checked~.custom-control-label::before {
-    border-color: #f23e6b;
-    background-color: #f23e6b;
-} */
-
-/* .custom-control-input.is-invalid~.custom-control-label::before,  */
-
-/* <div class="custom-control custom-checkbox topicCheckBox">
-<input type="checkbox" class="custom-control-input" id="customCheck2">
-<label class="custom-control-label topicCheckBoxFont" for="customCheck2"> 배송 SR </label>
-</div> */
-
 .custom-control-input:checked~.custom-control-label::before {
     border-radius: 2px;
     border: solid 1px #c8cacf;
     color: white;
-    border-color: #f23e6b;
-    background-color: #f23e6b;
-    box-shadow: white;
+    background-color: white;
 }
 .was-validated .custom-control-input:valid~.custom-control-label::before {
     border-color: white;
@@ -58,29 +43,9 @@
 
 }
 .has-success.checkbox-inline label {
-    color: #f23e6b;
+    color: white;
   }
 
-
-/* .custom-control-label::before {
-    border-color: #f23e6b;
-}
-.custom-control-label::after {
-    border-color: #f23e6b;
-}
-.custom-checkbox .custom-control-label::before {
-    border-radius: .25rem;
-} */
-/* .custom-checkbox .custom-control-label::after{
-    border-radius: 2px;
-    border: solid 1px #c8cacf;
-    background-color: #ffffff;
-    color:#f23e6b;
-}  */
-
-/* .custom-checkbox  .custom-control-input::after{
-    background-color: #f23e6b;
-} */
 .topicCheckBoxFont{
     font-family: 'AppleSDGothicNeo';
     font-size: 14px;

@@ -1,4 +1,7 @@
 body {
   background-color: #fafafa;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+
 }
 

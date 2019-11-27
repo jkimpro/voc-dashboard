@@ -1,0 +1,21 @@
+.resultBar{
+    padding: 41px 41px 0px 41px;
+    min-height: 80px;
+}
+
+.resultFont{
+    font-family: 'AppleSDGothicNeo';
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.07;
+  letter-spacing: normal;
+  color: #4a4e57;
+}
+.resultMarkFont{
+  color: #f23e6b;
+}
+.resultBarCol{
+    min-height: 64px; 
+}

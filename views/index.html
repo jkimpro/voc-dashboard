@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title> Voc Board </title>
+        <title> VOC Dashboard </title>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="/stylesheets/style.css">
@@ -13,6 +13,9 @@
         <link rel="stylesheet" href="/stylesheets/searchBarStyle.css">
         <link rel="stylesheet" href="/stylesheets/topicBarStyle.css">
         <link rel="stylesheet" href="/stylesheets/datepicker.css">
+        <link rel="stylesheet" href="/stylesheets/resultBarStyle.css">
+        <link rel="stylesheet" href="/stylesheets/radioBox.css">
+
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     </head>
     <body>
@@ -34,7 +37,6 @@
 
         <div class="container-fluid searchBar">
             <div class="row">
-
                 <div class="col-sm-3">
                     <button class="prdCompBtn">SR</button>
                     <button class="prdCompBtn">상품평</button>
@@ -119,7 +121,23 @@
                     </div>
                 </div>
             </div>
-            
+        </div>
+        <div class="container-fluid resultBar">
+            <div class="row">
+                <div class="col-md-6 resultFont">
+                    상품 <span id="resultData" class="resultMarkFont">‘35589096 [CAXA UP] 이영애 카사업 하트페이스 리프팅기’</span>에 대한 검색 결과  <span id="resultCount" class="resultMarkFont">352 건  </span>
+                </div>
+                <div class="col-md-6 resultFont justify-content-end" style="display:inherit">
+                    <span> 결과 내 검색 </span>
+                    <div>
+                        <ul>
+                            <li><input id="radio1" name="radio" type="radio" class="radio" checked="checked"> <label for="radio1">Option 1</label></li>
+                            <li><input id="radio2" name="radio" type="radio" class="radio"> <label for="radio2">Option 2</label></li>
+                            <li><input id="radio3" name="radio" type="radio" class="radio"> <label for="radio3">Option 3</label></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
