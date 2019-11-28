@@ -8,4 +8,18 @@ label{
   margin-bottom: 0;
 }
 
+.table tr{
+  padding: 0px 40px;
+}
+
+.table td, .table th {
+  padding: 15px 0px;
+  vertical-align: center;
+  border-top: 1px solid #dee2e6;
+}
+
+
+.colDefault{
+  padding: 0px 0px;
+}
 

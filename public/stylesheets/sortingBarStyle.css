@@ -1,0 +1,50 @@
+.tableBasic{
+    padding: 0px 41px;
+}
+.sortingBar{
+    min-height: 44px;
+    background-color:#ffffff;
+}
+
+.noFont {
+    font-family: 'AppleSDGothicNeo';
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: left;
+    color: #9b9ca0;
+    
+}
+
+.sortingFont{
+    font-family: 'AppleSDGothicNeo';
+    font-size: 13px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.08;
+    letter-spacing: normal;
+    color: #4a4e57;
+    text-align: left;
+    background-color:#ffffff;
+}
+
+.sortingBtn{
+    width: 15px;
+    height: 15px;
+    border: solid 1px #c8cacf;
+    vertical-align: middle;
+    background-color: white;
+  
+}
+
+/* input.img-button {
+    vertical-align: middle;
+    background-color: white;
+    border: solid 1px #c8cacf;
+    width: 14px;
+    height: 14px;
+  } */

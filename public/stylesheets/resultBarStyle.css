@@ -32,3 +32,68 @@
 .resultBarCol{
     min-height: 64px; 
 }
+
+.keywordInput{
+  width: 180px;
+  height: 34px;
+  border-radius: 5px;
+  border: solid 1px #c8cacf;
+  background-color: #ffffff;
+  padding: 0px 16px;
+  margin: 0px 10px;
+}
+
+.keywordFont{
+  font-family: 'AppleSDGothicNeo';
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.15;
+  letter-spacing: normal;
+  color: #9b9ca0;
+}
+.detailSearchBtn{
+  width: 60px;
+  min-height: 34px;
+  border-radius: 5px;
+  border: solid 1px #f23e6b;
+  background-color: #ffffff;
+}
+.detailSearchFont{
+  font-family: 'AppleSDGothicNeo';
+  font-size: 13px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.08;
+  letter-spacing: normal;
+  text-align: center;
+  color: #f23e6b;
+}
+.excelLogo{
+  width: 16px;
+  height: 12px;
+  background-color: #4a4e57;
+  margin-bottom: 1.5px;
+  margin-right: 2px;
+}
+.excelBtn{
+  width: 101px;
+  min-height: 34px;
+  border-radius: 5px;
+  border: solid 1px #c8cacf;
+  background-color: #ffffff;
+  margin-left:24px;
+}
+
+.excelFont{
+  font-family: 'AppleSDGothicNeo';
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.15;
+  letter-spacing: normal;
+  color: #4a4e57;
+}
