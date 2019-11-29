@@ -1,9 +1,10 @@
-.tableBasic{
-    padding: 0px 41px;
-}
 .sortingBar{
     min-height: 44px;
     background-color:#ffffff;
+}
+
+.tableBasic{
+    padding: 0px 41px;
 }
 
 .noFont {
@@ -14,20 +15,18 @@
     font-style: normal;
     line-height: 1.17;
     letter-spacing: normal;
-    text-align: left;
-    color: #9b9ca0;
-    
+    text-align: center;
+    color: #9b9ca0;  
 }
 
 .sortingFont{
-    font-family: 'AppleSDGothicNeo';
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.08;
+    line-height: 1.17;
     letter-spacing: normal;
-    color: #4a4e57;
+    color: #9b9ca0;
     text-align: left;
     background-color:#ffffff;
 }
@@ -36,15 +35,82 @@
     width: 15px;
     height: 15px;
     border: solid 1px #c8cacf;
-    vertical-align: middle;
-    background-color: white;
-  
+    vertical-align: top;
+    background-color: white; 
+    margin-left:2px;
 }
 
-/* input.img-button {
-    vertical-align: middle;
-    background-color: white;
-    border: solid 1px #c8cacf;
-    width: 14px;
-    height: 14px;
-  } */
+.padCol{
+    width:40px;
+}
+.noTd{
+    max-width: 40px;
+}
+.noSubTd{
+    text-align: center;
+}
+.receiptTd{
+    width: 130px;
+}
+.orderTd{
+    width: 130px;
+}
+.prdTd{
+    width: 170px;
+}
+.attTd{
+    width: 150px;
+}
+.mainTopicTd{
+    width: 140px;
+}
+.keywordTd{
+    width: 200px;
+}
+.srNumTd{
+    width: 70px;
+}
+.srInputTd{
+    max-width: 640px;
+}
+.srDivideTd{
+    width: 160px;
+}
+
+.tdBasicStyle{
+    font-family: 'AppleSDGothicNeo';
+    font-size: 13px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    color: #727272;
+    background-color:white;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.tdBasicStyle:hover{
+    background-color:#fafafa;
+}
+.tdTopicFont{
+    font-family: 'AppleSDGothicNeo';
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: #4a4e57;
+}
+
+.tdKeywordFont{
+    font-family: 'AppleSDGothicNeo';
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: #f23e6b;    
+}
