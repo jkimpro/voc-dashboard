@@ -7,14 +7,29 @@ body {
 label{
   margin-bottom: 0;
 }
-a:focus{
-  background-color:#f23e6b;
 
-}
-a:active{
-  background-color:#f23e6b;
+.dropdown-item:focus, .dropdown-item:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #ffcbd8;
+  
 }
 
+
+a:active, a:hover{
+  color:#f23e6b;
+  text-decoration: none;
+}
+
+
+.btn:focus{
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #f23e6b;
+}
+button:focus, input:focus{
+  /* outline: 0; */
+  outline-color: #f23e6b;
+}
 
 .table td, .table th {
   padding: 15px 10px;
