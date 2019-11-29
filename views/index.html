@@ -44,13 +44,12 @@
                     <button class="prdCompBtn">상품문의</button>
                 </div>
 
-                <div class="col-sm-9 justify-content-end" style="display:inherit">
+                <div class="col-sm-9 d-flex justify-content-end" style="display:inherit">
                     <div class="dropdown">
-                        <button class="btn dropdown-toggle prdDropdownBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            접수일
-                        </button>
+                        <button id="dateConditionDropDown" class="btn dropdown-toggle prdDropdownBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">접수일</button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#" onclick="dropDownChange(0,0)">접수일</a>
+                            <a class="dropdown-item" href="#" onclick="dropDownChange(0,1)">주문일</a>
                         </div>
                     </div>
                     <div id="dateArea" style="margin-right:20px">
@@ -58,33 +57,33 @@
                         </input>
                     </div>
                     <div class="dropdown">
-                        <button class="btn dropdown-toggle prdDropdownBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            SR대분류
-                        </button>
+                        <button id="conditionDropdown" class="btn dropdown-toggle prdDropdownBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SR대분류</button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#" onclick="dropDownChange(1,0)">SR대분류</a>
+                            <a class="dropdown-item" href="#" onclick="dropDownChange(1,1)">SR중분류</a>
+                            <a class="dropdown-item" href="#" onclick="dropDownChange(1,2)">SR소분류</a>
                         </div>
                     </div>
-                    <div id="dateArea" style="margin-right:20px">
-                        <input class="prdInput" type="text"  placeholder="조건을 검색해주세요">
+                    <div style="margin-right:20px">
+                        <input id="prdCondition"class="prdInput" type="text"  placeholder="조건을 검색해주세요">
                         </input>
                     </div>
 
                     <div class="dropdown">
-                        <button class="btn dropdown-toggle prdDropdownBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            상품코드
-                        </button>
+                        <button id="codeDropdown" class="btn dropdown-toggle prdDropdownBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">상품코드</button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#" onclick="dropDownChange(2,0)">상품코드</a>
+                            <a class="dropdown-item" href="#" onclick="dropDownChange(2,1)">접수코드</a>
+                            <a class="dropdown-item" href="#" onclick="dropDownChange(2,2)">주문코드</a>
+                            <a class="dropdown-item" href="#" onclick="dropDownChange(2,3)">상품명</a>
                         </div>
                     </div>
-                    <div id="dateArea" style="margin-right:20px">
-                        <input class="prdInput" type="text">
+                    <div style="margin-right:20px">
+                        <input id ="code" class="prdInput" type="text">
                         </input>
                     </div>
                     
-                    <button class="searchBtn">조회</button>
+                    <button onclick="serachData()" class="searchBtn">조회</button>
                 </div>
             </div>
         </div>
@@ -120,7 +119,7 @@
         <div class="container-fluid">
             <div class="row resultBar">
                 <div class="col-md-6 colDefault resultFont d-flex align-items-center">
-                    상품 <span id="resultData" class="resultMarkFont">‘35589096 [CAXA UP] 이영애 카사업 하트페이스 리프팅기’</span> 에 대한 검색 결과  <span id="resultCount" class="resultMarkFont"> 352 건  </span>
+                    상품 <span id="resultData" class="resultMarkFont">‘(Sample Data) 35589096 [CAXA UP] 이영애 카사업 하트페이스 리프팅기’</span> 에 대한 검색 결과  <span id="resultCount" class="resultMarkFont"> 352 건  </span>
                 </div>
                 <div class="col-md-6 colDefault resultOptionFont justify-content-end d-flex align-items-center" style="display:inherit">
                     <span> 결과 내 검색 </span>
@@ -138,51 +137,44 @@
                 </div>
             </div>
         </div>
-        <div class>
-            <table class="table">
-                <thead >
-                    <tr class="sortingFont"> 
-                        <th scope="col" class="padCol"></th>
-                        <th scope="col" class="noFont noTd">No.</th>
-                        <th scope="col" class="receiptTd">접수일시 <input type="image" src="images/sortingIcon.png" class="sortingBtn"/></th>
-                        <th scope="col" class="orderTd">주문일시 <input type="image" src="images/sortingIcon.png" class="sortingBtn"/></th>
-                        <th scope="col" class="prdTd">상품명 <input type="image" src="images/sortingIcon.png" class="sortingBtn"/></th>
-                        <th scope="col" class="attTd">속성 <input type="image" src="images/sortingIcon.png" class="sortingBtn"/></th>
-                        <th scope="col" class="mainTopicTd">주요토픽 <input type="image" src="images/sortingIcon.png" class="sortingBtn"/></th>
-                        <th scope="col" class="keywordTd">키워드 표현어</th>
-                        <th scope="col" class="srNumTd">SR 수<input type="image" src="images/sortingIcon.png" class="sortingBtn"/></th>
-                        <th scope="col" class="srInputTd">SR 접수 내용</th>
-                        <th scope="col" class="srDivideTd">SR소분류</th>
-                        <th scope="col" class="padCol"></th>
-
-                       
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="tdBasicStyle">
-                        <th scope="row"></th>
-                        <td class="noSubTd">1</td>
-                        <td>2019.06.07
-                                09:47</td>
-                        <td>2019.06.08
-                                15:00</td>
-                        <td>[CAXA UP] 이영애 카사업 하트페이스 리프팅기</td>
-                        
-                        <td>스위트 핑크</td>
-                        <td class="tdTopicFont">교환/반품/AS관련</td>
-                        <td class="tdKeywordFont">#배송지_문의  #배송_빠르다</td>
-                        <td class="noSubTd">5</td>
-                        <td>@고객 : 앱주문시 배송지를 고객님이 따로 입력 안해도 확인이 되는지 문의하심.
-                                @GS : 당사 기본 등록주소지로 주문시 배송지로 확인됨 안내드림./2019-06-14 배송 예정 안내</td>
-                        <td>(입고택배) 배송문의/요청</td>
-            
-                        <td></td>
-            
-                        </tr>
-                </tbody>
-            </table>
-                
-        </div>
+        <table class="table">
+            <thead>
+                <tr class="sortingFont"> 
+                    <th scope="col" class="padCol"></th>
+                    <th scope="col" class="noFont noTd">No.</th>
+                    <th scope="col" class="receiptTd">접수일시 <input type="image" src="images/sortingIcon.png" class="sortingBtn"/></th>
+                    <th scope="col" class="orderTd">주문일시 <input type="image" src="images/sortingIcon.png" class="sortingBtn"/></th>
+                    <th scope="col" class="prdTd">상품명 <input type="image" src="images/sortingIcon.png" class="sortingBtn"/></th>
+                    <th scope="col" class="attTd">속성 <input type="image" src="images/sortingIcon.png" class="sortingBtn"/></th>
+                    <th scope="col" class="mainTopicTd">주요토픽 <input type="image" src="images/sortingIcon.png" class="sortingBtn"/></th>
+                    <th scope="col" class="keywordTd">키워드 표현어</th>
+                    <th scope="col" class="srNumTd">SR 수<input type="image" src="images/sortingIcon.png" class="sortingBtn"/></th>
+                    <th scope="col" class="srInputTd">SR 접수 내용</th>
+                    <th scope="col" class="srDivideTd">SR소분류</th>
+                    <th scope="col" class="padCol"></th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <tr class="tdBasicStyle">
+                    <th scope="row"></th>
+                    <td class="noSubTd">1</td>
+                    <td>2019.06.07
+                            09:47</td>
+                    <td>2019.06.08
+                            15:00</td>
+                    <td>[CAXA UP] 이영애 카사업 하트페이스 리프팅기</td>
+                    <td>스위트 핑크</td>
+                    <td class="tdTopicFont">교환/반품/AS관련</td>
+                    <td class="tdKeywordFont">#배송지_문의  #배송_빠르다</td>
+                    <td class="noSubTd">5</td>
+                    <td>@고객 : 앱주문시 배송지를 고객님이 따로 입력 안해도 확인이 되는지 문의하심.
+                            @GS : 당사 기본 등록주소지로 주문시 배송지로 확인됨 안내드림./2019-06-14 배송 예정 안내</td>
+                    <td>(입고택배) 배송문의/요청</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>        
+    
         
               
         <script src="/js/jquery.min.js"></script>
@@ -191,6 +183,11 @@
         <script src="/js/bootstrap.min.js"></script>
         <script src="/javascripts/dateRangePicker.js"></script>
         <script src="/javascripts/search.js"></script>
+        <script src="/javascripts/makeDetailModal.js"></script>
+        <script src="/javascripts/sorting.js"></script>
+        <script src="/javascripts/dropdown.js"></script>
+
+
 
         <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
