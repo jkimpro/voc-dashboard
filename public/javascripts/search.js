@@ -45,13 +45,10 @@ let serachData = () =>{
     let codeDropdown =  document.getElementById('codeDropdown').innerText;
     let code = document.getElementById('code').value;
 
-
     console.log(dateConditionDropdown);
     console.log(dates);
-
     console.log(conditionDropdown);
     console.log(prdCondition);
-    
     console.log(codeDropdown);
     console.log(code);
 

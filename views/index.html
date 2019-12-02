@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="/stylesheets/resultBarStyle.css">
         <link rel="stylesheet" href="/stylesheets/radioBox.css">
         <link rel="stylesheet" href="/stylesheets/sortingBarStyle.css">
+        <link rel="stylesheet" href="/stylesheets/modalStyle.css">
 
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     </head>
@@ -155,7 +156,7 @@
                 </tr>
             </thead>
             <tbody id="tableBody">
-                <tr class="tdBasicStyle">
+                <tr class="tdBasicStyle" data-toggle="modal" data-target="#exampleModalCenter">
                     <th scope="row"></th>
                     <td class="noSubTd">1</td>
                     <td>2019.06.07
@@ -174,8 +175,36 @@
                 </tr>
             </tbody>
         </table>        
-    
-        
+
+
+        <!-- Button trigger modal -->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header d-flex align-items-center modalHeader">
+                            SR활동이력
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <img src="images/modalClose.png"/>
+                        </button>
+                    </div>
+                    <div class="modal-body modalBody">
+                        <div class="row tableUpperBar">
+                           <div class="col-md-6 resultFont resultModalFont">
+                                활동 이력 건수: <span class="resultMarkFont resultModalFont"> 7건 </span> 
+                           </div>
+                           <div class="col-md-6 justify-content-end resultRightModalFont" display="inherit">
+                                주문번호: <span class="modalMargin" id="orderNum"> 63339341 </span>
+                                SR번호: <span id="srNum"> S225419509 </span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
               
         <script src="/js/jquery.min.js"></script>
         <script src="/js/bootstrap.bundle.min.js"></script>
@@ -186,8 +215,6 @@
         <script src="/javascripts/makeDetailModal.js"></script>
         <script src="/javascripts/sorting.js"></script>
         <script src="/javascripts/dropdown.js"></script>
-
-
 
         <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
