@@ -1,5 +1,7 @@
 
 let colCount =0;
+let modalTableRowCount =0;
+
 let getDate = ()=>{
 
     let today = new Date();   
@@ -27,15 +29,19 @@ $(function() {
     });
 });
 
-let getData = (dateConditionDropdown,dates,conditionDropdown,prdCondition,codeDropdown,code) =>{
+
+
+
+let getTableData = (dateConditionDropdown,dates,conditionDropdown,prdCondition,codeDropdown,code) =>{
 
 }
 
 let setTableData = (data) =>{
 
 }
-let serachData = () =>{
 
+
+let serachData = () =>{
     let dateConditionDropdown = document.getElementById('dateConditionDropdown').innerText;
     let dates = dateRange;
 

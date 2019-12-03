@@ -176,22 +176,17 @@
             </tbody>
         </table>        
 
-
-        <!-- Button trigger modal -->
-
-
         <!-- Modal -->
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header d-flex align-items-center modalHeader">
                             SR활동이력
-
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <img src="images/modalClose.png"/>
                         </button>
                     </div>
-                    <div class="modal-body modalBody">
+                    <div class="modal-body modalBody scrollbar scrollbar-primary">
                         <div class="row tableUpperBar">
                            <div class="col-md-6 resultFont resultModalFont">
                                 활동 이력 건수: <span class="resultMarkFont resultModalFont"> 7건 </span> 
@@ -200,7 +195,55 @@
                                 주문번호: <span class="modalMargin" id="orderNum"> 63339341 </span>
                                 SR번호: <span id="srNum"> S225419509 </span>
                            </div>
-                       </div>
+                        </div>
+                       <!-- table -->
+                        <table class="table">
+                            <thead>
+                                <tr class="noFont"> 
+                                    <th scope="col" class="modalDefaultCell modalNo">No.</th>
+                                    <th scope="col" class="modalDefaultCell modalInputDate">접수일시</th>
+                                    <th scope="col" class="modalDefaultCell modalActive">활동유형</th>
+                                    <th scope="col" class="modalDefaultCell modalContents">내용</th>
+                                </tr>
+                            </thead> 
+
+                            <!-- modalTable body를 통해 추가를 하기 위함임 -->
+                            <tbody id="modalTableBody"> 
+                                <tr class="tdBasicStyle">
+                                    <td class="noSubTd">1</td>
+                                    <td>2019.06.07
+                                    09:47</td>
+                                    <td class="modalCellDetailFont">협력사 문의</td>
+                                    <td class="modalCellDetailFont">
+                                        @접수시간 : 2019/06/07 09:47:41
+                                        @주문상태 : &lt출하지시&gt @문의유형 : &lt반품교환 문의&gt
+                                        @내용 : 교환신청했는데 핸드폰번호가달라요핑크색불이 안들어와요하트윗부분이 핑크불이 들어왔다 안들어왔다 거의안들어와요 해당 내용으로 교환 요청입니다. 전산 교환 접수 해도 될까요? 
+                                    </td>
+                                </tr>
+                                <tr class="tdBasicStyle">
+                                    <td class="noSubTd">1</td>
+                                    <td>2019.06.07
+                                    09:47</td>
+                                    <td class="modalCellDetailFont">협력사 문의</td>
+                                    <td class="modalCellDetailFont">
+                                        @접수시간 : 2019/06/07 09:47:41
+                                        @주문상태 : &lt출하지시&gt @문의유형 : &lt반품교환 문의&gt
+                                        @내용 : 교환신청했는데 핸드폰번호가달라요핑크색불이 안들어와요하트윗부분이 핑크불이 들어왔다 안들어왔다 거의안들어와요 해당 내용으로 교환 요청입니다. 전산 교환 접수 해도 될까요? 
+                                    </td>
+                                </tr>
+                                <tr class="tdBasicStyle">
+                                    <td class="noSubTd">1</td>
+                                    <td>2019.06.07
+                                    09:47</td>
+                                    <td class="modalCellDetailFont">협력사 문의</td>
+                                    <td class="modalCellDetailFont">
+                                        @접수시간 : 2019/06/07 09:47:41
+                                        @주문상태 : &lt출하지시&gt @문의유형 : &lt반품교환 문의&gt
+                                        @내용 : 교환신청했는데 핸드폰번호가달라요핑크색불이 안들어와요하트윗부분이 핑크불이 들어왔다 안들어왔다 거의안들어와요 해당 내용으로 교환 요청입니다. 전산 교환 접수 해도 될까요? 
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>        
                     </div>
                 </div>
             </div>
@@ -214,6 +257,7 @@
         <script src="/javascripts/search.js"></script>
         <script src="/javascripts/makeDetailModal.js"></script>
         <script src="/javascripts/sorting.js"></script>
+        <script src="/javascripts/scrollBar.js"></script>
         <script src="/javascripts/dropdown.js"></script>
 
         <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
