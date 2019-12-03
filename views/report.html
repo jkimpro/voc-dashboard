@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title> VOC Dashboard </title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/headerStyle.css">
+        <link rel="stylesheet" href="/stylesheets/searchBarStyle.css">
+        <link rel="stylesheet" href="/stylesheets/topicBarStyle.css">
+        <link rel="stylesheet" href="/stylesheets/datepicker.css">
+        <link rel="stylesheet" href="/stylesheets/resultBarStyle.css">
+        <link rel="stylesheet" href="/stylesheets/radioBox.css">
+        <link rel="stylesheet" href="/stylesheets/sortingBarStyle.css">
+        <link rel="stylesheet" href="/stylesheets/modalStyle.css">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    </head>
+    <body>
+        <div class="container-fluid header">
+            <div class="row">
+                <div class="col-sm-4">
+                    <a href ="/"><img src="images/logo.png"  class="logo"></a>
+                </div>
+                <div class="col-sm-4 header-middle justify-content-center">
+                    <a href = "/" class="middleBtn"> VOC 원문보기 </a>
+                    <a class="selectedMiddleBtn"> VOC Report </a>
+                </div>
+                <div class="col-sm-4 header-right justify-content-end">
+                    <a href = "#" class="idBtn"> 김준혁님 </a>
+                    <a href = "#" class="logoutBtn"> 로그아웃 </a>    
+                </div>             
+            </div>
+        </div>
+
+        <div class="container-fluid searchBar">
+            <div class="row">
+                <div class="col-sm-3">
+                    <button class="prdCompBtn">SR</button>
+                    <button class="prdCompBtn">상품평</button>
+                    <button class="prdCompBtn">상품문의</button>
+                </div>
+
+                <div class="col-sm-9 d-flex justify-content-end" style="display:inherit">
+                    <div class="dropdown">
+                        <button id="dateConditionDropdown" class="btn dropdown-toggle prdDropdownBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">접수일</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#" onclick="dropDownChange(0,0)">접수일</a>
+                            <a class="dropdown-item" href="#" onclick="dropDownChange(0,1)">주문일</a>
+                        </div>
+                    </div>
+                    <div id="dateArea" style="margin-right:20px">
+                        <input class="form-control prdDateRangepicker" id="dates" type="text" name="dates" autocomplete="on">
+                        </input>
+                    </div>
+                    <div class="dropdown">
+                        <button id="conditionDropdown" class="btn dropdown-toggle prdDropdownBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SR대분류</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#" onclick="dropDownChange(1,0)">SR대분류</a>
+                            <a class="dropdown-item" href="#" onclick="dropDownChange(1,1)">SR중분류</a>
+                            <a class="dropdown-item" href="#" onclick="dropDownChange(1,2)">SR소분류</a>
+                        </div>
+                    </div>
+                    <div style="margin-right:20px">
+                        <input id="prdCondition" class="prdInput" type="text"  placeholder="조건을 검색해주세요">
+                        </input>
+                    </div>
+
+                    <div class="dropdown">
+                        <button id="codeDropdown" class="btn dropdown-toggle prdDropdownBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">상품코드</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#" onclick="dropDownChange(2,0)">상품코드</a>
+                            <a class="dropdown-item" href="#" onclick="dropDownChange(2,1)">접수코드</a>
+                            <a class="dropdown-item" href="#" onclick="dropDownChange(2,2)">주문코드</a>
+                            <a class="dropdown-item" href="#" onclick="dropDownChange(2,3)">상품명</a>
+                        </div>
+                    </div>
+                    <div style="margin-right:20px">
+                        <input id ="code" class="prdInput" type="text">
+                        </input>
+                    </div>
+                    
+                    <button onclick="serachData()" class="searchBtn">조회</button>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row topicBar">                     <!--      이부분 반드시 유념할것 -->
+                <div class="col-md-6 colDefault topicBarCol  d-flex align-items-center">
+                    <div class="topicFont" style="margin-right:10px"> 주요 토픽 </div>
+                    <button class="topicFont topicBarCommonBtn">배송관련(0)</button>
+                    <button class="topicFont topicBarCommonBtn">상품관련(0)</button>
+                    <button class="topicFont topicBarCommonBtn">교환/반품/AS관련(0)</button>
+                    <button class="topicFont topicBarCommonBtn">방송이용관련(0)</button>
+                    <button class="topicFont topicBarCommonBtn">상품품질관련(0)</button>
+                    <button class="topicFont topicBarCommonBtn">고객제안(0)</button>
+                    <button class="topicFont topicBarCommonBtn">미등록(0)</button>
+            
+                </div>
+                <div class="col-md-6 colDefault topicBarCol d-flex align-items-center justify-content-end" style="display:inherit">  
+                    <div class="topicCheckBox">
+                        <input type="checkbox" id="customCheck1">
+                        <label class="topicCheckBoxFont" for="customCheck1"> 상품문의/품질 SR </label>
+                    </div>
+                    <div class="topicCheckBox">
+                        <input type="checkbox" id="customCheck2">
+                        <label class="topicCheckBoxFont" for="customCheck2"> 배송 SR </label>
+                    </div>
+                    <div class="topicCheckBox">
+                        <input type="checkbox" id="customCheck3">
+                        <label class="topicCheckBoxFont" for="customCheck3"> 그 외 SR </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+              
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/bootstrap.bundle.min.js"></script>
+        <script src="/js/bootstrap.bundle.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/javascripts/date.js"> </script>
+        <script src="/javascripts/search.js"></script>
+        <script src="/javascripts/makeDetailModal.js"></script>
+        <script src="/javascripts/sorting.js"></script>
+        <script src="/javascripts/scrollBar.js"></script>
+        <script src="/javascripts/dropdown.js"></script>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+      
+    </body>
+
+</html>

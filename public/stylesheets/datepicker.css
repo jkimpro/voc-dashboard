@@ -11,6 +11,8 @@
 .ui-datepicker a {
 	text-decoration: none;
 }
+
+
 /* DatePicker Table */
 .ui-datepicker table {
   width: 100%;
@@ -112,8 +114,26 @@
 .ui-datepicker-calendar .ui-state-hover {
 	background: #f7f7f7;
 }
+.daterangepicker td.in-range {
+    background-color: #f8ebeb !important;
+    border-color: transparent;
+    color: #000;
+    border-radius: 0;
+}
+.daterangepicker td.active, .daterangepicker td.active:hover {
+    background-color: #f23e6b !important; 
+    border-color: transparent;
+    color: #fff;
+}
+
+.btn-primary, .btn-primary:hover {
+    color: #fff;
+    background-color: #f23e6b !important;
+	border-color: #f23e6b !important;
+}
+
 .ui-datepicker-calendar .ui-state-active {
-	background: #6eafbf;
+	background:#6eafbf;
 	-webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
 	-moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
 	box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);

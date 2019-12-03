@@ -8,6 +8,7 @@ label{
   margin-bottom: 0;
 }
 
+
 .dropdown-item:focus, .dropdown-item:hover {
   color: #ffffff;
   text-decoration: none;
@@ -15,20 +16,24 @@ label{
   
 }
 
-
+.form-control:focus{
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #f6bfbf;
+  border: 1px solid #f6bfbf;
+}
 a:active, a:hover{
-  color:#f23e6b;
+  color:#f6bfbf;
   text-decoration: none;
 }
 
-
 .btn:focus{
   outline: 0;
-  box-shadow: 0 0 0 0.2rem #f23e6b;
+  box-shadow: 0 0 0 0.2rem #f6bfbf;
 }
+
 button:focus, input:focus{
-  /* outline: 0; */
-  outline-color: #f23e6b;
+  
+outline-color: #f6bfbf;
 }
 
 .table td, .table th {
