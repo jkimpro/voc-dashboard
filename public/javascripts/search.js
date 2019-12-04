@@ -55,7 +55,8 @@ let getOnlyTime = (date) =>{
 let getContentsFormat = (contents) =>{
     let result= contents.split('@');
     result.map((element)=>{
-        element = element.concat('<br>@', element);
+        element = element.concat("\@", element);
+        element = element.concat(element,"<br>");
     });
     return result; 
 }
@@ -65,12 +66,20 @@ let isConditionExist= (originCond, compCond) => {
 }
 
 let getTableData = (dateOption,dates,conditionDropdown,prdCondition,codeDropdown,code) =>{
-    let result = new Array();  
+    let result = new Array();
+    console.log('dateOption = ' + dateOption);
+
     if(dateOption === '접수일'){
         mockTable.map((element) =>{
             let compDate = parseInt(element.input_date.substring(0,8));
+            console.log('compdate: ' + compDate);
+            console.log('dates[0]: ' + parseInt(dates[0]));
+            console.log('dates[1]: ' + parseInt(dates[1]));
+            
             if(compDate>= parseInt(dates[0])
                 && compDate <= parseInt(dates[1])){
+             
+                console.log('피알디 코드: '+ element.prd_code);
                 result.push(element);
             }
         });
@@ -86,8 +95,14 @@ let getTableData = (dateOption,dates,conditionDropdown,prdCondition,codeDropdown
     }
 
     for(let i =0; i<result.length; i++){
-        if(!isConditionExist(prdCondition, result[i].sr_option)
-           || parseInt(code) !== result.prd_code){
+        console.log('parseInt(code) : ' + code);
+        console.log('result.prd_code : ' + result[i].prd_code);
+
+        if(isConditionExist(prdCondition, result[i].sr_option)
+           && parseInt(code) === result[i].prd_code){
+            continue;
+        }
+        else{
             result.splice(i, 1);
             i--;
         }
@@ -97,19 +112,21 @@ let getTableData = (dateOption,dates,conditionDropdown,prdCondition,codeDropdown
 
 
 let setTable = (data) =>{
+    
+    console.log('set table inside');
+    console.log('data length' + data.length);
+
     let tableBody = document.getElementById('tableBody');
     if(colCount !==0){
         tableBody.innerHTML = ``;
-        colCount =0; 
+        colCount=0; 
     }
     data.map((element) =>{
         let temp = document.createElement('tr');
         temp.className=`tdBasicStyle`;
         temp.setAttribute( 'data-toggle', 'modal');
         temp.setAttribute( 'data-target', '#exampleModalCenter');
-    
         colCount+=1;
-        
         temp.innerHTML = `
             <th scope="row"></th>
             <td class="noSubTd">${colCount}</td>
