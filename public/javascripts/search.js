@@ -4,15 +4,6 @@ $.getJSON('/mockTable.json', (data)=>{
 });
 
 
-// let mockTable = new Array();
-// $.ajax({
-//     url:'mockTable.json',
-//     dataType:'json',
-//     type:'get',
-//     cache:false,
-//     success: getAllData = (temp) =>{
-//         mockTable = temp;
-//     }});
 
 let colCount =1;
 let modalTableRowCount =0;
@@ -44,7 +35,7 @@ $(function() {
 
 let getOnlyDate =(date) =>{
     let result = date.substring(0,8);
-    result = result.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+    result = result.substring(0,4) + "/" + result.substring(4,6) + "/" +result.substring(6,8);
     return result;
 }
 let getOnlyTime = (date) =>{
@@ -55,8 +46,15 @@ let getOnlyTime = (date) =>{
 let getContentsFormat = (contents) =>{
     let result= contents.split('@');
     result.map((element)=>{
-        element = element.concat("\@", element);
+        console.log(element);
+
+        element = element.concat("@", element);
+        console.log(element);
+
+        
         element = element.concat(element,"<br>");
+        console.log(element);
+
     });
     return result; 
 }
