@@ -18,6 +18,5 @@ let dropDownChange = (option, num) =>{
         let origin = document.getElementById('codeDropdown');
         origin.innerText ="";
         origin.innerText = codeArr[num];
-   
     }
 }
