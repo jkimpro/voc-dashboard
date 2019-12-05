@@ -43,42 +43,41 @@ let getOnlyTime = (date) =>{
     result = result.substring(0,2) + ":" + result.substring(2,4) + ":" +result.substring(4,6);
     return result;
 }
+
+
+
+
 let getContentsFormat = (contents) =>{
-    let result= contents.split('@');
-    result.map((element)=>{
-        console.log(element);
-
-        element = element.concat("@", element);
-        console.log(element);
-
-        
-        element = element.concat(element,"<br>");
-        console.log(element);
-
+    console.log("contents: " + contents);
+    let result = ``;
+    let output = contents.split('@').map((element)=>{
+        let temp = element;
+        temp = `@${element}<br>`;
+        return temp;
     });
+
+    for(let i =1; i<output.length; i++){
+        result +=output[i];
+    }
     return result; 
 }
+
+
 let isConditionExist= (originCond, compCond) => {
     //조건 소거 logic 별도 개발 필요
+
     return true;
 }
 
+
 let getTableData = (dateOption,dates,conditionDropdown,prdCondition,codeDropdown,code) =>{
     let result = new Array();
-    console.log('dateOption = ' + dateOption);
-
     if(dateOption === '접수일'){
         mockTable.map((element) =>{
             let compDate = parseInt(element.input_date.substring(0,8));
-            console.log('compdate: ' + compDate);
-            console.log('dates[0]: ' + parseInt(dates[0]));
-            console.log('dates[1]: ' + parseInt(dates[1]));
-            
             if(compDate>= parseInt(dates[0])
                 && compDate <= parseInt(dates[1])){
-             
-                console.log('피알디 코드: '+ element.prd_code);
-                result.push(element);
+                 result.push(element);
             }
         });
     }
@@ -93,9 +92,6 @@ let getTableData = (dateOption,dates,conditionDropdown,prdCondition,codeDropdown
     }
 
     for(let i =0; i<result.length; i++){
-        console.log('parseInt(code) : ' + code);
-        console.log('result.prd_code : ' + result[i].prd_code);
-
         if(isConditionExist(prdCondition, result[i].sr_option)
            && parseInt(code) === result[i].prd_code){
             continue;
@@ -110,10 +106,6 @@ let getTableData = (dateOption,dates,conditionDropdown,prdCondition,codeDropdown
 
 
 let setTable = (data) =>{
-    
-    console.log('set table inside');
-    console.log('data length' + data.length);
-
     let tableBody = document.getElementById('tableBody');
     if(colCount !==0){
         tableBody.innerHTML = ``;
@@ -144,8 +136,17 @@ let setTable = (data) =>{
         tableBody.appendChild(temp);
     });    
 }
+let setResultBar = (data) =>{
+    let resultBarTitle = document.getElementById('resultData'); 
+    let resultBarCount = document.getElementById('resultCount');
+    
+    resultBarTitle.innerHTML = ``;
+    resultBarCount.innerHTML = ``;
 
-let serachData = () =>{
+    resultBarTitle.innerHTML = "&nbsp; \'" + `${data[0].prd_code} ${data[0].prd_name}`+ "\' &nbsp;";
+    resultBarCount.innerHTML = "&nbsp; " + `${colCount}건`;
+}
+let searchData = () =>{
     console.log(mockTable);
     let dateConditionDropdown = document.getElementById('dateConditionDropdown').innerText;
     let dates = dateRange;
@@ -159,5 +160,6 @@ let serachData = () =>{
     
     let data = getTableData(dateConditionDropdown,dates,conditionDropdown,prdCondition,codeDropdown,code);
     setTable(data);
+    setResultBar(data);
 }
 
