@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="/stylesheets/modalStyle.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     </head>
-    <body>
+    <body id="body">
         <div class="container-fluid header">
             <div class="row">
                 <div class="col-sm-4">
@@ -92,14 +92,13 @@
             <div class="row topicBar">                     <!--      이부분 반드시 유념할것 -->
                 <div class="col-md-6 colDefault topicBarCol  d-flex align-items-center">
                     <div class="topicFont" style="margin-right:10px"> 주요 토픽 </div>
-                    <button class="topicFont topicBarCommonBtn">배송관련(0)</button>
-                    <button class="topicFont topicBarCommonBtn">상품관련(0)</button>
-                    <button class="topicFont topicBarCommonBtn">교환/반품/AS관련(0)</button>
-                    <button class="topicFont topicBarCommonBtn">방송이용관련(0)</button>
-                    <button class="topicFont topicBarCommonBtn">상품품질관련(0)</button>
-                    <button class="topicFont topicBarCommonBtn">고객제안(0)</button>
-                    <button class="topicFont topicBarCommonBtn">미등록(0)</button>
-            
+                    <button class="topicFont topicBarCommonBtn">배송관련(<span id="topic0">0</span>)</button>
+                    <button class="topicFont topicBarCommonBtn">상품관련(<span id="topic1">0</span>)</button>
+                    <button class="topicFont topicBarCommonBtn">교환/반품/AS관련(<span id="topic2">0</span>)</button>
+                    <button class="topicFont topicBarCommonBtn">방송이용관련(<span id="topic3">3</span>)</button>
+                    <button class="topicFont topicBarCommonBtn">상품품질관련(<span id="topic4">0</span>)</button>
+                    <button class="topicFont topicBarCommonBtn">고객제안(<span id="topic5">0</span>)</button>
+                    <button class="topicFont topicBarCommonBtn">미등록(<span id="topic6">0</span>)</button>
                 </div>
                 <div class="col-md-6 colDefault topicBarCol d-flex align-items-center justify-content-end" style="display:inherit">  
                     <div class="topicCheckBox">
@@ -156,7 +155,7 @@
                 </tr>
             </thead>
             <tbody id="tableBody">
-                <tr class="tdBasicStyle" data-toggle="modal" data-target="#exampleModalCenter">
+                <tr class="tdBasicStyle" data-toggle="modal" data-target="#exampleModalCenter" onclick="searchModalData()">
                     <th scope="row"></th>
                     <td class="noSubTd">1</td>
                     <td>2019.06.07<br>
@@ -220,28 +219,6 @@
                                         @내용 : 교환신청했는데 핸드폰번호가달라요핑크색불이 안들어와요하트윗부분이 핑크불이 들어왔다 안들어왔다 거의안들어와요 해당 내용으로 교환 요청입니다. 전산 교환 접수 해도 될까요? 
                                     </td>
                                 </tr>
-                                <tr class="tdBasicStyle">
-                                    <td class="noSubTd">1</td>
-                                    <td>2019.06.07
-                                    09:47</td>
-                                    <td class="modalCellDetailFont">협력사 문의</td>
-                                    <td class="modalCellDetailFont">
-                                        @접수시간 : 2019/06/07 09:47:41
-                                        @주문상태 : &lt출하지시&gt @문의유형 : &lt반품교환 문의&gt
-                                        @내용 : 교환신청했는데 핸드폰번호가달라요핑크색불이 안들어와요하트윗부분이 핑크불이 들어왔다 안들어왔다 거의안들어와요 해당 내용으로 교환 요청입니다. 전산 교환 접수 해도 될까요? 
-                                    </td>
-                                </tr>
-                                <tr class="tdBasicStyle">
-                                    <td class="noSubTd">1</td>
-                                    <td>2019.06.07
-                                    09:47</td>
-                                    <td class="modalCellDetailFont">협력사 문의</td>
-                                    <td class="modalCellDetailFont">
-                                        @접수시간 : 2019/06/07 09:47:41
-                                        @주문상태 : &lt출하지시&gt @문의유형 : &lt반품교환 문의&gt
-                                        @내용 : 교환신청했는데 핸드폰번호가달라요핑크색불이 안들어와요하트윗부분이 핑크불이 들어왔다 안들어왔다 거의안들어와요 해당 내용으로 교환 요청입니다. 전산 교환 접수 해도 될까요? 
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>        
                     </div>
@@ -256,7 +233,6 @@
 
 
         <script src="/javascripts/search.js"></script>
-        <script src="/javascripts/makeDetailModal.js"></script>
         <script src="/javascripts/sorting.js"></script>
         <script src="/javascripts/dropdown.js"></script>
 

@@ -1,0 +1,63 @@
+[
+    {
+        "sr_input_date": "20191205123011",
+        "sr_active_cat": "-",
+        "sr_contents": "@접수시간 : 2019/06/07 09:47:41 @주문상태 : <출하지시> @문의유형 : <반품교환 문의> @내용 : 교환신청했는데 핸드폰번호가달라요핑크색불이 안들어와요하트윗부분이 핑크불이 들어왔다 안들어왔다 거의안들어와요 해당 내용으로 교환 요청입니다. 전산 교환 접수 해도 될까요?",
+        "url": "https://github.com/jkimpro/"
+    },
+    {
+        "sr_input_date": "20191205123011",
+        "sr_active_cat": "협력사 문의",
+        "sr_contents":"'@내용 : 교환신청했는데 핸드폰번호가달라요핑크색불이 안들어와요하트윗부분이 핑크불이 들어왔다 안들어왔다 거의안들어와요 해당 내용으로 교환 요청입니다. 전산 교환 접수 해도 될까요? ",
+        "url": "https://github.com/jkimpro/"
+    },
+    {
+        "sr_input_date": "20191205123011",
+        "sr_active_cat": "모바일 Outbound",
+        "sr_contents": "안녕하세요~ 고객님 GS SHOP OOO입니다. 불편을 드려 죄송합니다. 문의주신 내용은 확인중에 있습니다. 제가 오늘중으로 확인후 모바일 답변으로 안내드리겠습니다. 불편하시지만, 조금만 더 기다려 주세요.감사합니다.",
+        "url": "https://github.com/jkimpro/"
+    },
+    {
+        "sr_input_date": "20191205123011",
+        "sr_active_cat": "고객 Inbound",
+        "sr_contents": "'@고객 : 핑크색불이 안들어오고 하트윗부분이 핑크불이 들어왔다 안들어왔다 거의안들어옴/ 불들어오는곳이 2곳이 있는것같은데 하트윗면에 잠시들어왔다가 계속 파란불 들어옴,  불량인것같다 하심. @GS : 업체문의후 연락 16시 @협력사문의/요구사항 : 해당 내용으로 교환 요청입니다. 전산 교환 접수 해도 될까요?",
+
+        "url": "https://github.com/jkimpro/"
+    },
+    {
+        "sr_input_date": "20191205123011",
+        "sr_active_cat": "협력사 답변",
+        "sr_contents": "당사 규정 상 교환 시 제품 상태 확인 후 가능합니다. 정확한 제품 상태 확인을 위해 080-555-8800 안내 부탁 드립니다.  ",
+        "url": "https://github.com/jkimpro/"
+    },
+    {
+        "sr_input_date": "20191205123011",
+        "sr_active_cat": "고객 Outbound",
+        "sr_contents": "@GS : 협력사 확인내용 안내 @고객 : 알겠음/ 연락해보겠음",
+        "url": "https://github.com/jkimpro/"
+    },
+    {
+        "sr_input_date": "20191205123011",
+        "sr_active_cat": "SMS발송",
+        "sr_contents": "☎18994500 GSSHOP[ 카사업 ]080-555-8800 번호로 연락부탁드립니다. 감사합니다.",
+        "url": "https://github.com/jkimpro/"
+    },
+    {
+        "sr_input_date": "20191205123011",
+        "sr_active_cat": "SMS발송",
+        "sr_contents": "☎18994500 GSSHOP[ 카사업 ]080-555-8800 번호로 연락부탁드립니다. 감사합니다.",
+        "url": "https://github.com/jkimpro/"
+    }, {
+        "sr_input_date": "20191205123011",
+        "sr_active_cat": "SMS발송",
+        "sr_contents": "☎18994500 GSSHOP[ 카사업 ]080-555-8800 번호로 연락부탁드립니다. 감사합니다.",
+        "url": "https://github.com/jkimpro/"
+    }
+    , {
+        "sr_input_date": "20191205123011",
+        "sr_active_cat": "SMS발송",
+        "sr_contents": "☎18994500 GSSHOP[ 카사업 ]080-555-8800 번호로 연락부탁드립니다. 감사합니다.",
+        "url": "https://github.com/jkimpro/"
+    }
+    
+]
